@@ -36,7 +36,7 @@ simulador-cne/
 │   ├── 03_subconsultas.sql             # Resolución de subconsultas (Niveles 1, 2 y 3)
 │   └── 04_vistas.sql                   # Definición de la vista Vw_candidatos
 └── README.md
-
+```
 ## ⚠️ Aviso Legal (Disclaimer)
 
 > **Nota Importante:** Este proyecto tiene fines **estrictamente académicos y educativos**, desarrollado exclusivamente para la asignatura de **Base de Datos** de la Carrera de Ingeniería en Ciencias de la Computación.
