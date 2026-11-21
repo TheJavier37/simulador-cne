@@ -97,10 +97,7 @@ WHERE r.votos > (
 	FROM candidatos AS c_dignidad
 	JOIN resultados AS r_dignidad ON r_dignidad.id_candidato = c_dignidad.id_candidato
 	WHERE c_dignidad.id_dignidad = c.id_dignidad
-);-- ============================================================================
--- Proyecto: Sistema CNE Simulado - Subconsultas
--- Motor: MySQL 8.0+
--- ============================================================================
+);
 
 -- 10. Candidatos con la mayor votación de su cantón; incluye todos los empates.
 SELECT c.nombres, c.apellidos, ca.nombre AS canton, r.votos
