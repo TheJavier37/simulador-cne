@@ -2,7 +2,7 @@ USE simulador_cne;
 
 -- Candidatos inscritos para la dignidad de alcalde.
 SELECT nombres, apellidos
-FROM candidatos
+FROM candidato
 WHERE id_dignidad = (
 	SELECT id_dignidad
 	FROM dignidad

@@ -2,7 +2,7 @@ USE simulador_cne;
 
 -- Candidatos pertenecientes al Movimiento Renovación Ciudadana.
 SELECT nombres, apellidos
-FROM candidatos
+FROM candidato
 WHERE id_organizacion = (
 	SELECT id_organizacion
 	FROM organizacion

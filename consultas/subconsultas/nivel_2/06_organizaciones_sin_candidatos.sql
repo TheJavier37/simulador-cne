@@ -5,6 +5,6 @@ SELECT o.nombre, o.siglas, o.numero_lista
 FROM organizacion AS o
 WHERE NOT EXISTS (
 	SELECT 1
-	FROM candidatos AS c
+	FROM candidato AS c
 	WHERE c.id_organizacion = o.id_organizacion
 );

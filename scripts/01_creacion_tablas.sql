@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS simulador_cne;
 -- ============================================================================
 -- Proyecto: Sistema CNE Simulado - Base de Datos Relacional
 -- Archivo:  scripts/01_creacion_tablas.sql
@@ -55,8 +56,8 @@ CREATE TABLE votante (
         ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
--- 6. Tabla: candidatos (Relación 1:N con organizacion, dignidad y canton)
-CREATE TABLE candidatos (
+-- 6. Tabla: candidato (Relación 1:N con organizacion, dignidad y canton)
+CREATE TABLE candidato (
     id_candidato INT AUTO_INCREMENT PRIMARY KEY,
     nombres VARCHAR(60) NOT NULL,
     apellidos VARCHAR(60) NOT NULL,
@@ -74,14 +75,14 @@ CREATE TABLE candidatos (
         ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
--- 7. Tabla: resultados (Relación 1:0..1 con candidatos)
-CREATE TABLE resultados (
+-- 7. Tabla: resultado (Relación 1:1 con candidato)
+CREATE TABLE resultado (
     id_resultado INT AUTO_INCREMENT PRIMARY KEY,
     votos INT NOT NULL,
     fecha DATE NOT NULL,
     id_candidato INT NOT NULL UNIQUE,
     CONSTRAINT chk_votos_no_negativos CHECK (votos >= 0),
     CONSTRAINT fk_resultado_candidato
-        FOREIGN KEY (id_candidato) REFERENCES candidatos(id_candidato)
+        FOREIGN KEY (id_candidato) REFERENCES candidato(id_candidato)
         ON DELETE RESTRICT ON UPDATE CASCADE
 );

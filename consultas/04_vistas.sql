@@ -10,7 +10,7 @@ SELECT
 	d.nombre AS dignidad,
 	ca.nombre AS canton,
 	p.nombre AS provincia
-FROM candidatos AS c
+FROM candidato AS c
 JOIN organizacion AS o ON o.id_organizacion = c.id_organizacion
 JOIN dignidad AS d ON d.id_dignidad = c.id_dignidad
 JOIN canton AS ca ON ca.id_canton = c.id_canton

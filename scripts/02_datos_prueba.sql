@@ -37,7 +37,7 @@ INSERT INTO dignidad (nombre, descripcion) VALUES
 ('Concejal Urbano', 'Integrante del cuerpo legislativo del concejo cantonal');
 
 -- 5. candidatos
-INSERT INTO candidatos (nombres, apellidos, id_organizacion, id_dignidad, id_canton) VALUES
+INSERT INTO candidato (nombres, apellidos, id_organizacion, id_dignidad, id_canton) VALUES
 ('Carlos Andrés', 'Mendoza Silva', 1, 1, 1),
 ('María Fernanda', 'Torres León', 2, 1, 1),
 ('Diego Patricio', 'Armijos Cueva', 3, 3, 1),
@@ -52,7 +52,7 @@ INSERT INTO candidatos (nombres, apellidos, id_organizacion, id_dignidad, id_can
 ('Gabriela Nicole', 'Ochoa Tandazo', 3, 1, 3);
 
 -- 6. resultados
-INSERT INTO resultados (votos, fecha, id_candidato) VALUES
+INSERT INTO resultado (votos, fecha, id_candidato) VALUES
 (18500, '2026-11-15', 1),
 (18500, '2026-11-15', 2),
 (9200,  '2026-11-15', 3),
