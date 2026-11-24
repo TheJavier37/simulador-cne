@@ -33,8 +33,11 @@ simulador-cne/
 │   ├── 01_creacion_tablas.sql          # Sentencias DDL (CREATE TABLE, PK, FK, CHECK)
 │   └── 02_datos_prueba.sql             # Sentencias DML (INSERT de datos ficticios)
 ├── consultas/
-│   ├── 03_subconsultas.sql             # Resolución de subconsultas (Niveles 1, 2 y 3)
-│   └── 04_vistas.sql                   # Definición de la vista Vw_candidatos
+│   ├── subconsultas/
+│   │   ├── nivel_1/                    # Subconsultas básicas (4 archivos SQL)
+│   │   ├── nivel_2/                    # Subconsultas con operadores (4 archivos SQL)
+│   │   └── nivel_3/                    # Subconsultas correlacionadas (4 archivos SQL)
+│   └── 04_vistas.sql                   # Definición de la vista de candidatos
 └── README.md
 ```
 ## ⚠️ Aviso Legal (Disclaimer)
